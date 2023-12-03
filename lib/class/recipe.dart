@@ -1,5 +1,3 @@
-import 'package:eval/class/resource.dart';
-
 enum GameplayType {
   tool,
   material,

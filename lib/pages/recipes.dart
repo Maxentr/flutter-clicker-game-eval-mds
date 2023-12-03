@@ -5,9 +5,10 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 class RecipesPage extends StatelessWidget {
+  const RecipesPage({super.key});
+
   @override
   Widget build(BuildContext context) {
-    var appState = Provider.of<AppState>(context);
     return DefaultTabController(
       length: recipeCategories.length,
       child: Scaffold(
@@ -32,7 +33,7 @@ class RecipesPage extends StatelessWidget {
 class RecipeCategoryWidget extends StatelessWidget {
   final RecipeCategory category;
 
-  RecipeCategoryWidget({required this.category});
+  RecipeCategoryWidget({super.key, required this.category});
 
   @override
   Widget build(BuildContext context) {
@@ -49,7 +50,7 @@ class RecipeCategoryWidget extends StatelessWidget {
 class RecipeWidget extends StatelessWidget {
   final Recipe recipe;
 
-  RecipeWidget({required this.recipe});
+  const RecipeWidget({super.key, required this.recipe});
 
   @override
   Widget build(BuildContext context) {

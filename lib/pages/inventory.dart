@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 class InventoryPage extends StatelessWidget {
+  const InventoryPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     var appState = Provider.of<AppState>(context);
@@ -25,7 +27,7 @@ class InventoryPage extends StatelessWidget {
 class InventoryItemWidget extends StatelessWidget {
   final InventoryItem inventoryItem;
 
-  InventoryItemWidget({required this.inventoryItem});
+  InventoryItemWidget({super.key, required this.inventoryItem});
 
   @override
   Widget build(BuildContext context) {

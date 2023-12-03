@@ -6,9 +6,10 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 class ResourcesPage extends StatelessWidget {
+  const ResourcesPage({super.key});
+
   @override
   Widget build(BuildContext context) {
-    var appState = Provider.of<AppState>(context);
     return Scaffold(
       appBar: AppBar(
         title: Text("Ressources"),
@@ -48,9 +49,9 @@ class ResourcesPage extends StatelessWidget {
 
 class ResourceWidget extends StatelessWidget {
   final Resource resource;
-  late Color textColor;
+  late final Color textColor;
 
-  ResourceWidget({required this.resource}) {
+  ResourceWidget({super.key, required this.resource}) {
     textColor =
         resource.color.computeLuminance() > 0.2 ? Colors.black : Colors.white;
   }
